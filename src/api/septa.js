@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// http://www3.septa.org/api/
+// relays to http://www3.septa.org/api/
 
 export default axios.create({
-	baseURL: 'http://www3.septa.org/hackathon',
+	baseURL: 'https://logikbox.com/api/septa.php',
 });

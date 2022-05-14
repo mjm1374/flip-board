@@ -7,7 +7,7 @@ const FlipCard = ({ value }) => {
 	const nums = '0123456789';
 	const chars = '!@#$%^&*()_+-';
 	const symbols = [...(nums + latin + chars)];
-	console.log(symbols);
+	//console.log(symbols);
 	const index = symbols.indexOf(value);
 
 	return (
