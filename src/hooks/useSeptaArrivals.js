@@ -9,15 +9,16 @@ const useSeptaArrivals = (station) => {
 	}, [station]);
 
 	const search = async (station) => {
-		const respose = await septa.get('', {
+		const response = await septa.get('', {
 			params: {
 				station: station,
 				count: 10,
 			},
 		});
-		console.log(respose.data);
 
-		setTrains(respose.data);
+		console.log(response.data[Object.keys(response.data)[0]][0]);
+
+		setTrains(response.data);
 	};
 
 	return [trains, search];
