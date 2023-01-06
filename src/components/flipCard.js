@@ -16,29 +16,39 @@ const FlipCard = ({ value, oldValue = '0' }) => {
 
 	const [displayChar, setDisplayChar] = useState(oldValue);
 
-	const flip = (flipCard, newChar) => {
-		const topHalf = flipCard.querySelectorAll('.top');
-		const startingChar = topHalf.textContent;
+	const flip = (flipCard, startingChar, newChar) => {
+		console.log(`${startingChar} - ${newChar}`);
+
 		if (newChar === startingChar) return;
 
+		const topHalf = flipCard.querySelectorAll('.top');
 		const bottomHalf = flipCard.querySelectorAll('.bottom');
+
 		const topFlip = document.createElement('div');
-		topFlip.classList.add('top-flip');
 		const bottomFlip = document.createElement('div');
+
+		topHalf.textContent = newChar;
+		bottomHalf.textContent = startingChar;
+
+		topFlip.textContent = startingChar;
+		bottomFlip.textContent = startingChar;
+
+		topFlip.classList.add('top-flip');
 		bottomFlip.classList.add('bottom-flip');
 
-		topHalf.textContent = startingChar;
-		bottomHalf.textContent = startingChar;
-		topFlip.textContent = startingChar;
-		bottomFlip.textContent = newChar;
-
 		topFlip.addEventListener('animationstart', (e) => {
-			topHalf.textContent = newChar;
-			play();
+			//topHalf.textContent = newChar;
+			console.log(topHalf.textContent, bottomHalf.textContent);
+			//play();
 		});
 		topFlip.addEventListener('animationend', (e) => {
 			topFlip.remove();
 		});
+
+		bottomFlip.addEventListener('animationstart', (e) => {
+			//bottomFlip.textContent = newChar;
+		});
+
 		bottomFlip.addEventListener('animationend', (e) => {
 			bottomHalf.textContent = newChar;
 			bottomFlip.remove();
@@ -50,13 +60,13 @@ const FlipCard = ({ value, oldValue = '0' }) => {
 	useEffect(() => {
 		let startIndex = symbols.indexOf(displayChar);
 		const endIndex = symbols.indexOf(value);
-		play();
+		//play();
 
 		const myCard = document.querySelector('.flip-card');
 		if (myCard !== null) {
 			if (startIndex !== endIndex) {
 				if (startIndex === symbols.length - 1) startIndex = -1;
-				flip(myCard, symbols[startIndex + 1]);
+				flip(myCard, symbols[startIndex], symbols[startIndex + 1]);
 			}
 		}
 	}, [displayChar]);

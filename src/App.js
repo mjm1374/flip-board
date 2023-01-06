@@ -19,10 +19,18 @@ function App() {
 				</button>
 			) : (
 				<div className='flip-row'>
-					<FlipCard value='M' oldValue='K'></FlipCard>
-					<FlipCard value='I' oldValue='A'></FlipCard>
-					<FlipCard value='K' oldValue='T'></FlipCard>
-					<FlipCard value='E' oldValue='E'></FlipCard>
+					<FlipCard value='M' oldValue='A' key='0'></FlipCard>
+					{/* <FlipCard value='I' oldValue='A' key='1'></FlipCard>
+					<FlipCard value='K' oldValue='T' key='2'></FlipCard> */}
+					{/* <FlipCard value='E' oldValue='f' key='3'></FlipCard>
+					<FlipCard value='M' oldValue='a' key='4'></FlipCard>
+					<FlipCard value='I' oldValue='A' key='5'></FlipCard>
+					<FlipCard value='K' oldValue='T' key='6'></FlipCard>
+					<FlipCard value='E' oldValue='f' key='7'></FlipCard>
+					<FlipCard value='M' oldValue='a' key='8'></FlipCard>
+					<FlipCard value='I' oldValue='A' key='9'></FlipCard>
+					<FlipCard value='K' oldValue='T' key='10'></FlipCard>
+					<FlipCard value='E' oldValue='f' key='11'></FlipCard> */}
 				</div>
 			)}
 		</div>
