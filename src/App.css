@@ -8,3 +8,10 @@ body {
   background-color: #f2f1ed;
   color: #de4848;
 }
+
+.flip-row{
+  display: flex;
+  justify-self: start;
+  flex-direction: row;
+
+}

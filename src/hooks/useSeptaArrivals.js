@@ -16,7 +16,9 @@ const useSeptaArrivals = (station) => {
 			},
 		});
 
-		console.log(response.data[Object.keys(response.data)[0]][0]);
+		console.log(
+			structuredClone(response.data[Object.keys(response.data)[0]][0])
+		);
 
 		setTrains(response.data);
 	};
