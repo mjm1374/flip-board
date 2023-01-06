@@ -5,6 +5,7 @@
     flex-direction: column;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
     border-radius: .1em;
+    width: 115px;
 
   }
   
@@ -15,7 +16,8 @@
     height: .75em;
     line-height: 1;
     padding: .25em;
-    overflow: hidden;   
+    overflow: hidden;  
+     
   }
   
   .top,
@@ -25,6 +27,7 @@
     border-top-left-radius: .1em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
+
   }
   
   .bottom,
@@ -32,8 +35,10 @@
     background-color: white;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     border-bottom-right-radius: .1em;
     border-bottom-left-radius: .1em;
+
   }
   
   .flip-card .top-flip {
@@ -53,7 +58,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    animation: flip-bottom 5ms ease-out 25ms;
+    animation: flip-bottom .1s ease-out 25ms;
     transform-origin: top;
     transform: rotateX(90deg);
   }

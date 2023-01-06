@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useSound from 'use-sound';
 
-import flipSound from '../assets/63533__florian-reinke__flip1.wav';
+import flipSound from '../assets/84322__splashdust__flipcard.wav';
 import './flipCard.css';
 
 const FlipCard = ({ value, oldValue = '0' }) => {
@@ -68,9 +68,6 @@ const FlipCard = ({ value, oldValue = '0' }) => {
 			<div className='flip-card'>
 				<div className='top'>{displayChar}</div>
 				<div className='bottom'>{displayChar}</div>
-				<button onMouseDown={playActive} onClick={playOn()}>
-					Click
-				</button>
 			</div>
 		</div>
 	);
